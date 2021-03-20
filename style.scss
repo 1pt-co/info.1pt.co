@@ -32,14 +32,11 @@ h1 {
 }
 
 #long {
-  color: white;
   font-weight: 100;
-  transition: color 0.25s;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
 
   &:hover {
-    color: #4287f5;
+    color: #4287f5 !important;
   }
-
-  color: transparent;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
