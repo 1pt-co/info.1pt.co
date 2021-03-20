@@ -19,6 +19,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 #short {
   background-color: #c8d0de;
   border-radius: $round-edges;
@@ -29,9 +33,13 @@ body {
 
 #long {
   color: white;
+  font-weight: 100;
   transition: color 0.25s;
 
   &:hover {
     color: #4287f5;
   }
+
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }

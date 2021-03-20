@@ -1,4 +1,5 @@
 SITE_URL = "info.1pt.co/";
+SITE_URL = "localhost:4000/";
 
 window.onload = function () {
   var url = window.location.href.split(SITE_URL)[1].toLowerCase();
@@ -6,18 +7,23 @@ window.onload = function () {
   url = url.split("?")[0]; // Remove URL parameters
   url = url.replace("/", ""); // Remove trailing slashes
 
+  document.querySelector("#short").innerHTML = "1pt.co/" + url;
+
   var xhttp = new XMLHttpRequest();
+
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 301) {
       data = JSON.parse(this.responseText);
-      document.getElementById("short").innerHTML = "1pt.co/" + url;
-      document.getElementById("long").innerHTML = data.long;
-      document.getElementById("long").href = data.long;
+      document.querySelector("#long").innerHTML = data.long;
+      document.querySelector("#long").href = data.long;
+      document.querySelector("#long").style.textShadow = "none";
+      document.querySelector("#long").style.color = "white";
     } else if (this.readyState == 4 && this.status == 404) {
-      document.getElementById("error404").style.visibility = "visible";
-      document.getElementById("loading").style.display = "none";
+      document.querySelector("#error404").style.visibility = "visible";
+      document.querySelector("#loading").style.display = "none";
     }
   };
+
   xhttp.open("GET", "https://api.1pt.co/getInfo?url=" + url, true);
   xhttp.send();
 };
