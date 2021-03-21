@@ -18,8 +18,9 @@ window.onload = function () {
       document.querySelector("#long").style.textShadow = "none";
       document.querySelector("#long").style.color = "white";
     } else if (this.readyState == 4 && this.status == 404) {
-      document.querySelector("#error404").style.visibility = "visible";
-      document.querySelector("#loading").style.display = "none";
+      document.querySelector("#long").style.display = "none";
+      document.querySelector("#description").innerHTML =
+        "does not redirect anywhere!";
     }
   };
 
