@@ -32,11 +32,29 @@ h1 {
 }
 
 #long {
-  font-weight: 100;
+  font-weight: 400;
   color: transparent;
   text-shadow: 0 0 5px rgba(255, 255, 255, 1);
 
   &:hover {
     color: #4287f5 !important;
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 80px;
+  }
+
+  h2 {
+    font-size: 50px;
+    margin: 0;
+
+    .description {
+      font-weight: 400;
+    }
   }
 }
