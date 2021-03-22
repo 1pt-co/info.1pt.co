@@ -28,6 +28,27 @@ window.onload = function () {
 function displayInfo(info) {
   const date = Date.parse(info.date);
   const now = Date.now();
+  const deltaDays = Math.round((now - date) / (1000 * 60 * 60 * 24));
+
+  var number = 0;
+  var description = "";
+
+  if (deltaDays == 0) {
+    number = "";
+    description = "Today";
+  } else if (deltaDays == 1) {
+    number = "";
+    description = "Yesterday";
+  } else if (deltaDays < 30) {
+    number = deltaDays;
+    description = " days ago";
+  } else if (deltaDays < 365) {
+    number = Math.ceil(deltaDays / 30);
+    description = " months ago";
+  } else {
+    number = Math.ceil(deltaDays / 365);
+    description = " years ago";
+  }
 
   document.querySelector("#long").innerHTML = data.long;
   document.querySelector("#long").href = data.long;
@@ -35,7 +56,6 @@ function displayInfo(info) {
   document.querySelector("#long").style.color = "white";
 
   document.querySelector("#clicks").innerHTML = data.hits;
-  document.querySelector("#date").innerHTML = Math.round(
-    (now - date) / (1000 * 60 * 60 * 24)
-  );
+  document.querySelector("#date").innerHTML = number;
+  document.querySelector("#date-description").innerHTML = description;
 }
