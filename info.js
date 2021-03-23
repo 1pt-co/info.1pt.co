@@ -1,4 +1,5 @@
 SITE_URL = "info.1pt.co/";
+SITE_URL = "localhost:4000/";
 
 window.onload = function () {
   var url = window.location.href.split(SITE_URL)[1].toLowerCase();
@@ -14,10 +15,12 @@ window.onload = function () {
     if (this.readyState == 4 && this.status == 301) {
       data = JSON.parse(this.responseText);
       displayInfo(data);
+      finishLoading();
     } else if (this.readyState == 4 && this.status == 404) {
       document.querySelector("#long").style.display = "none";
       document.querySelector("#description").innerHTML =
         "does not redirect anywhere!";
+      finishLoading();
     }
   };
 
@@ -55,7 +58,18 @@ function displayInfo(info) {
   document.querySelector("#long").style.textShadow = "none";
   document.querySelector("#long").style.color = "white";
 
+  const divs = document.getElementsByClassName("info");
+
+  Array.from(divs).forEach((div) => {
+    div.style.display = "flex";
+  });
+
   document.querySelector("#clicks").innerHTML = data.hits;
   document.querySelector("#date").innerHTML = number;
   document.querySelector("#date-description").innerHTML = description;
+}
+
+function finishLoading() {
+  document.querySelector("#loaded").style.display = "flex";
+  document.querySelector("#loading").style.display = "none";
 }

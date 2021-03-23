@@ -7,16 +7,45 @@ $round-edges: 10px;
 $animation-duration: 0.7s;
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   margin: 0;
   padding: 0;
   background-color: $primary-color;
   color: white;
   font-family: "Poppins", sans-serif;
+}
+
+#loaded {
+  display: none;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.loader {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0;
+  box-sizing: border-box;
+  border-left: 0.5rem solid white;
+  border-top: 0.5rem solid white;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 h1 {
@@ -42,7 +71,7 @@ h1 {
 }
 
 .info {
-  display: flex;
+  display: none;
   align-items: center;
 
   img {
