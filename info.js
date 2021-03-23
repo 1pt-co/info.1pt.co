@@ -54,8 +54,6 @@ function displayInfo(info) {
 
   document.querySelector("#long").innerHTML = data.long;
   document.querySelector("#long").href = data.long;
-  document.querySelector("#long").style.textShadow = "none";
-  document.querySelector("#long").style.color = "white";
 
   const divs = document.getElementsByClassName("info");
 
