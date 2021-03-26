@@ -8,82 +8,49 @@ $animation-duration: 0.7s;
 
 body {
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: $primary-color;
-  color: white;
-  font-family: "Poppins", sans-serif;
-}
-
-#loaded {
-  display: none;
-}
-
-.centered {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-}
-
-.loader {
-  content: "";
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0;
-  box-sizing: border-box;
-  border-left: 0.5rem solid white;
-  border-top: 0.5rem solid white;
-  animation: rotate 1s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  background-color: $primary-color;
+  color: white;
 }
 
 h1 {
-  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
-#short {
-  background-color: #c8d0de;
+input {
   border-radius: $round-edges;
   color: $primary-color;
-  padding: 10px 20px;
-  font-weight: 100;
+  padding: 10px;
+  font-size: 25px;
+  outline: none;
+  border: none;
+  font-family: "Open Sans";
+  width: 1000px;
 }
 
-#long {
-  font-weight: 400;
+#input {
+  width: 1100px;
+  margin-right: 0;
+  border-radius: $round-edges 0 0 $round-edges;
+  text-align: center;
+  box-sizing: border-box;
+  color: $primary-color;
+}
+
+#go {
+  width: 100px;
+  margin-left: 0;
+  border-radius: 0 $round-edges $round-edges 0;
+  float: right;
+  border-radius: $round-edges;
+  background-color: $secondary-color;
   color: white;
-  transition: color 0.2s;
 
   &:hover {
-    color: #4287f5 !important;
-  }
-}
-
-.info {
-  display: none;
-  align-items: center;
-
-  img {
-    height: 80px;
-  }
-
-  h2 {
-    font-size: 40px;
-    margin: 0;
-
-    #date-description {
-      font-weight: 400;
-    }
+    cursor: pointer;
+    background-color: #0e0e14;
   }
 }
