@@ -63,6 +63,8 @@ function displayInfo(info) {
     document.querySelector("#verified").style.display = "block";
   } else {
     document.querySelector("#malicious").style.display = "block";
+    document.querySelector("#long").removeAttribute("href");
+    document.querySelector("#long").classList.remove("link");
   }
 }
 
