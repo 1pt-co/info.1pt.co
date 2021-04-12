@@ -50,6 +50,7 @@ body {
 
 h1 {
   text-align: center;
+  font-weight: 400;
 }
 
 #short {
@@ -60,8 +61,7 @@ h1 {
   font-weight: 100;
 }
 
-#long {
-  font-weight: 400;
+a {
   color: white;
 
   &:hover {
@@ -71,14 +71,10 @@ h1 {
 
 .info {
   align-items: center;
-
-  img {
-    height: 50px;
-    vertical-align: middle;
-  }
+  margin: 20px 0;
 
   h2 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
 
     #date-description {
@@ -90,7 +86,25 @@ h1 {
 #verified,
 #malicious {
   display: none;
+
+  img {
+    height: 30px;
+    vertical-align: middle;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
   i {
     color: #ff5252;
   }
+}
+
+.row {
+  display: flex;
+}
+
+.row div {
+  padding: 0 30px;
 }
