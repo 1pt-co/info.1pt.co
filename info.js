@@ -33,6 +33,12 @@ function displayInfo(info) {
   const now = Date.now();
   const deltaDays = Math.round((now - date) / (1000 * 60 * 60 * 24));
 
+  if (info.long.includes("https://") || info.long.includes("http://")) {
+    var long = info.long;
+  } else {
+    var long = "http://" + info.long;
+  }
+
   var number = 0;
   var description = "";
 
@@ -53,17 +59,17 @@ function displayInfo(info) {
     description = " years ago";
   }
 
-  document.querySelector("#long").innerHTML = data.long;
-  document.querySelector("#long").href = data.long;
+  document.querySelector("#long").innerHTML = long;
+  document.querySelector("#long").href = long;
 
-  document.querySelector("#clicks").innerHTML = data.hits;
+  document.querySelector("#clicks").innerHTML = info.hits;
   document.querySelector("#date").innerHTML = number;
   document.querySelector("#date-description").innerHTML = description;
 
-  if (!data.malicious) {
+  if (!info.malicious) {
     document.querySelector("#verified").style.display = "block";
-    document.querySelector("#preview").src = data.long;
-    document.querySelector("#preview-wrapper").href = data.long;
+    document.querySelector("#preview").src = long;
+    document.querySelector("#preview-wrapper").href = long;
   } else {
     document.querySelector("#malicious").style.display = "block";
     document.querySelector("#long").removeAttribute("href");
