@@ -74,7 +74,7 @@ h1 {
 }
 
 iframe {
-  border: none;
+  border: 10px solid white;
   overflow: hidden;
   border-radius: 50px;
   width: 1920px;
@@ -82,6 +82,7 @@ iframe {
   transform: scale($iframe-scale-factor);
   transform-origin: 0 0;
   pointer-events: none;
+  background-color: white;
 }
 
 #short {
