@@ -5,6 +5,7 @@ $primary-color: #2e2f4a;
 $secondary-color: #171721;
 $round-edges: 10px;
 $animation-duration: 0.7s;
+$iframe-scale-factor: 0.18;
 
 body {
   height: 100vh;
@@ -54,10 +55,15 @@ h1 {
   font-weight: 400;
 }
 
+.info-wrapper {
+  display: flex;
+  margin: 30px 0;
+}
+
 #preview-wrapper {
   display: block;
-  height: 216px;
-  width: 384px;
+  height: 1080px * $iframe-scale-factor;
+  width: 1920px * $iframe-scale-factor;
   border-radius: 50px;
   transition: filter 0.2s;
   margin: 15px;
@@ -73,7 +79,7 @@ iframe {
   border-radius: 50px;
   width: 1920px;
   height: 1080px;
-  transform: scale(0.2);
+  transform: scale($iframe-scale-factor);
   transform-origin: 0 0;
   pointer-events: none;
 }
@@ -96,7 +102,7 @@ iframe {
 
 .info {
   align-items: center;
-  margin: 20px 0;
+  margin: 15px 0;
 
   h2 {
     font-size: 30px;
@@ -127,10 +133,9 @@ iframe {
   }
 }
 
-.row {
+.col {
+  margin-left: 20px;
   display: flex;
-}
-
-.row div {
-  padding: 0 30px;
+  flex-direction: column;
+  justify-content: center;
 }
