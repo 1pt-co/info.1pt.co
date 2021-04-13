@@ -20,6 +20,7 @@ window.onload = function () {
       document.querySelector("#description").innerHTML =
         "does not redirect anywhere!";
       finishLoading();
+      document.querySelector(".row").style.display = "none";
     }
   };
 
@@ -66,6 +67,9 @@ function displayInfo(info) {
     document.querySelector("#long").removeAttribute("href");
     document.querySelector("#long").classList.remove("link");
   }
+
+  document.querySelector("#preview").src = data.long;
+  document.querySelector("#preview-wrapper").href = data.long;
 }
 
 function finishLoading() {

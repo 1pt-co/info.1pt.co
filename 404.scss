@@ -13,6 +13,7 @@ body {
   background-color: $primary-color;
   color: white;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 #loaded {
@@ -51,6 +52,30 @@ body {
 h1 {
   text-align: center;
   font-weight: 400;
+}
+
+#preview-wrapper {
+  display: block;
+  height: 216px;
+  width: 384px;
+  border-radius: 50px;
+  transition: filter 0.2s;
+  margin: 15px;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+iframe {
+  border: none;
+  overflow: hidden;
+  border-radius: 50px;
+  width: 1920px;
+  height: 1080px;
+  transform: scale(0.2);
+  transform-origin: 0 0;
+  pointer-events: none;
 }
 
 #short {
