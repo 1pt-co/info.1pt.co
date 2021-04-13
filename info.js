@@ -1,5 +1,4 @@
 SITE_URL = "info.1pt.co/";
-SITE_URL = "localhost:4000/";
 
 window.onload = function () {
   var url = window.location.href.split(SITE_URL)[1].toLowerCase();
