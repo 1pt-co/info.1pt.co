@@ -60,7 +60,7 @@ function displayInfo(info) {
   }
 
   document.querySelector("#long").innerHTML = long;
-  document.querySelector("#long").href = long;
+  document.querySelector("#long").href = "https://1pt.co/" + info.short;
 
   document.querySelector("#clicks").innerHTML = info.hits;
   document.querySelector("#date").innerHTML = number;
@@ -70,7 +70,8 @@ function displayInfo(info) {
     document.querySelector("#verified").style.display = "block";
     document.querySelector("#preview").src =
       "https://api.1pt.co/proxy?url=" + long;
-    document.querySelector("#preview-wrapper").href = long;
+    document.querySelector("#preview-wrapper").href =
+      "https://1pt.co/" + info.short;
   } else {
     document.querySelector("#malicious").style.display = "block";
     document.querySelector("#long").removeAttribute("href");
