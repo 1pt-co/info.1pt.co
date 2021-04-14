@@ -20,7 +20,7 @@ window.onload = function () {
       document.querySelector("#description").innerHTML =
         "does not redirect anywhere!";
       finishLoading();
-      document.querySelector(".row").style.display = "none";
+      document.querySelector(".info-wrapper").style.display = "none";
     }
   };
 
