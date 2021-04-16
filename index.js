@@ -24,7 +24,7 @@ function go() {
     short = input.value.substr(18);
 
   if (short !== "") window.location.href = "https://info.1pt.co/" + short;
-  else showError("Invalid URL!");
+  else showError("Invalid URL!", "Please enter a 1pt.co URL");
 }
 
 const showError = (title, description) => {
