@@ -8,17 +8,18 @@ $animation-duration: 0.7s;
 
 body {
   margin: 0;
+
+  background-color: $primary-color;
+  color: white;
+  font-family: "Open Sans";
+}
+
+.center {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: $primary-color;
-  color: white;
-}
-
-h1 {
-  font-family: "Poppins", sans-serif;
 }
 
 input {
