@@ -55,3 +55,9 @@ input {
     background-color: #0e0e14;
   }
 }
+
+@media only screen and (max-width: 1300px) {
+  #input {
+    width: calc(90vw - 100px);
+  }
+}

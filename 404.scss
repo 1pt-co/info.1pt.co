@@ -57,6 +57,7 @@ h1 {
 
 .info-wrapper {
   display: flex;
+  flex-direction: row;
   margin: 30px 0;
 }
 
@@ -125,6 +126,7 @@ iframe {
   }
 
   h2 {
+    text-align: center;
     font-size: 25px;
     font-weight: 400;
   }
@@ -139,4 +141,40 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media only screen and (max-width: 650px) {
+  .info-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    flex-direction: row;
+  }
+
+  .info {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #preview-wrapper {
+    height: 1080px * 0.15;
+    width: 1920px * 0.15;
+  }
+
+  iframe {
+    transform: scale(0.15);
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .info h2,
+  #malicious h2,
+  #verified h2 {
+    font-size: 20px;
+  }
 }
