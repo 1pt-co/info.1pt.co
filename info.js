@@ -2,7 +2,6 @@ SITE_URL = "info.1pt.co/";
 
 window.onload = function () {
   var url = window.location.href.split(SITE_URL)[1].toLowerCase();
-  console.log(window.location.href);
   url = url.split("?")[0]; // Remove URL parameters
   url = url.replace("/", ""); // Remove trailing slashes
 
