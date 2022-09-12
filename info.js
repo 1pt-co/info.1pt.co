@@ -23,7 +23,7 @@ window.onload = function () {
     }
   };
 
-  xhttp.open("GET", "https://thakkaha.dev.fast.sheridanc.on.ca/pme/1pt/getInfo.php?url=" + url, true);
+  xhttp.open("GET", "https://thakdees.dev.fast.sheridanc.on.ca/1pt/getInfo.php?url=" + url, true);
   xhttp.send();
 };
 
