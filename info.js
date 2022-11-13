@@ -23,7 +23,7 @@ window.onload = function () {
     }
   };
 
-  xhttp.open("GET", "https://thakdees.dev.fast.sheridanc.on.ca/1pt/getInfo.php?url=" + url, true);
+  xhttp.open("GET", "https://csclub.uwaterloo.ca/~phthakka/1pt/getInfo.php?url=" + url, true);
   xhttp.send();
 };
 
