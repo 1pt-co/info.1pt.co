@@ -67,8 +67,7 @@ function displayInfo(info) {
 
   if (!info.malicious) {
     document.querySelector("#verified").style.display = "block";
-    document.querySelector("#preview").src =
-      "https://api.1pt.co/proxy?url=" + long;
+    document.querySelector("#preview").src = long;
     document.querySelector("#preview-wrapper").href =
       "https://1pt.co/" + info.short;
   } else {
