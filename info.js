@@ -67,8 +67,7 @@ function displayInfo(info) {
 
   if (!info.malicious) {
     document.querySelector("#verified").style.display = "block";
-    document.querySelector("#preview").src =
-      "https://api.codetabs.com/v1/proxy/?quest=" + long;
+    document.querySelector("#preview").src = long;
     document.querySelector("#preview-wrapper").href =
       "https://1pt.co/" + info.short;
   } else {
